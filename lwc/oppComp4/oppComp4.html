@@ -1,0 +1,16 @@
+<template>
+    <lightning-card icon-name="standard:opportunity" title="LDT" >
+         <template lwc:if={selectedRecordId} >
+        <lightning-button slot="actions" label="Delete" variant="destructive" onclick={handleDeleteButton}>
+        </lightning-button>
+    </template>
+    </lightning-card>
+   
+    <lightning-datatable key-field="id"
+        data={oppService.data}
+        show-row-number-column="true"
+        max-row-selection="1"
+        onrowselection={handleRowSelection}
+        columns={columns} >
+    </lightning-datatable>
+</template>

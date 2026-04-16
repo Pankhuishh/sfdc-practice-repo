@@ -1,0 +1,28 @@
+<template>
+    <div class="slds-box slds-theme_shade">
+        <div class="slds-box header-message">
+            Simple Calculator
+        </div>
+        <div>
+            <lightning-input label="First Number" value={firstNumber} 
+            onblur={handleBlurFirst}></lightning-input>
+            <lightning-input label="Second Number" value={secondNumber} 
+            onblur={handleBlurSecond}></lightning-input>
+        </div>
+        <template lwc:if={isShowResult}>
+            <div>
+                Result:
+                <span class={resultClass}>
+                    {result} 
+                    </span>
+
+            </div>
+        </template>
+        <div>
+        <lightning-button label="Add" variant="brand" onclick={addNumber}></lightning-button>
+        <lightning-button label="Sub" variant="destructive" onclick={subNumber}></lightning-button>
+        <lightning-button label="Mul" variant="default" onclick={mulNumber}></lightning-button>
+        <lightning-button label="Div" variant="success" onclick={divNumber}></lightning-button>
+        </div>
+    </div>
+</template>

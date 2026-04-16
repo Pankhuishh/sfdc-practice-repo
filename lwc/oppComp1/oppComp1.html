@@ -1,0 +1,20 @@
+<template>
+    <table class="slds-table slds-table_bordered slds-table_striped">
+        <thead>
+            <tr>
+                <th>Opportunity Name</th>
+                <th>Stage</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+           <template for:each={Service.data} for:item="opp">
+            <tr key={opp.Id}>
+                <td>{opp.Name}</td>
+                <td>{opp.StageName}</td>
+                <td>{opp.Amount}</td>
+            </tr>
+           </template>
+        </tbody>
+    </table>
+</template>
