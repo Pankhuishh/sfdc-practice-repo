@@ -1,0 +1,31 @@
+<template>
+    <div class="slds-box slds-theme_default">
+    <lightning-vertical-navigation onselect={handleSelect}>
+      <lightning-vertical-navigation-section label="Browse">
+        <lightning-vertical-navigation-item-icon
+          label="Account Search" 
+          name="accountSearch" 
+          icon-name="standard:account"
+        ></lightning-vertical-navigation-item-icon>
+        <lightning-vertical-navigation-item-icon
+          label="Calculator" 
+          name="calc" 
+          icon-name="utility:add"
+        ></lightning-vertical-navigation-item-icon>
+        </lightning-vertical-navigation-section>
+         <lightning-vertical-navigation-section label="Deal">
+        <lightning-vertical-navigation-item-icon
+          label="All Deal" 
+          name="all" 
+          icon-name="standard:account"
+        ></lightning-vertical-navigation-item-icon>
+        <lightning-vertical-navigation-item-icon
+          label="Graph" 
+          name="graph" 
+          icon-name="utility:graph"
+        ></lightning-vertical-navigation-item-icon>
+      
+      </lightning-vertical-navigation-section>  
+    </lightning-vertical-navigation>
+</div>
+</template>

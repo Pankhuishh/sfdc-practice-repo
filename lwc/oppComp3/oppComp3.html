@@ -1,0 +1,28 @@
+<template>
+    <lightning-card icon-name="standard:opportunity" title="Deal Info" >
+        <div slot="actions">
+            <lightning-button label="Won Deal" variant="success" onclick={handleWonDeal}></lightning-button>
+            <lightning-button label="Lost Deal" variant="destructive" onclick={handleLostDeal}></lightning-button>
+        </div>
+    </lightning-card>
+    <template lwc:if={oppList}>
+    <table class="slds-table slds-table_bordered slds-table_striped">
+        <thead>
+            <tr>
+                <th>Opportunity Name</th>
+                <th>Stage</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+           <template for:each={oppList} for:item="opp">
+            <tr key={opp.Id}>
+                <td>{opp.Name}</td>
+                <td>{opp.StageName}</td>
+                <td>{opp.Amount}</td>
+            </tr>
+           </template>
+        </tbody>
+    </table>
+    </template>
+</template>

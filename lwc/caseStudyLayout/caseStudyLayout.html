@@ -1,0 +1,31 @@
+<template>
+    <lightning-layout >
+
+      <lightning-layout-item size="2">
+        <c-case-study-navigation onnavigation={handleNavigation}></c-case-study-navigation>
+      </lightning-layout-item>
+      <template lwc:if={issearchAccount}>
+          <lightning-layout-item size="5">
+      <c-account-search-result></c-account-search-result>
+    </lightning-layout-item>
+     <lightning-layout-item size="5">
+      <c-account-detail></c-account-detail>
+    </lightning-layout-item>
+      </template>
+    <template lwc:if={isCalc}>
+       <lightning-layout-item size="9">
+      <c-simple-calc></c-simple-calc>
+    </lightning-layout-item>
+    </template>
+    <template lwc:if={isAll}>
+       <lightning-layout-item size="9">
+      <c-opp-comp4></c-opp-comp4>
+    </lightning-layout-item>
+    </template>
+    <template lwc:if={isGraph}>
+       <lightning-layout-item size="9">
+      <c-graph-comp></c-graph-comp>
+    </lightning-layout-item>
+    </template>
+    </lightning-layout>
+</template>

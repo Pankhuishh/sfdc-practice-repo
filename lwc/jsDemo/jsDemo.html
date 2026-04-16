@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="JS Demo">
+        <lightning-button slot="actions" label="Refresh"
+         variant="brand" icon-name="utility:refresh" onclick={updateDateTimeUsingCallback}>
+        </lightning-button>
+        <lightning-button slot="actions" label="Refresh Using Arrow"
+         variant="brand" icon-name="utility:refresh" onclick={updateDateTimeUsingArrow}>
+        </lightning-button>
+        {todayDateTime}
+    </lightning-card>
+</template>

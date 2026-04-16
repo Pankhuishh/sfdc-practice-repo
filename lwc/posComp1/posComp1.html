@@ -1,0 +1,24 @@
+<template>
+    <table class="slds-table slds-table_bordered slds-table_striped">
+        <thead>
+            <tr>
+                <th>Position Name</th>
+                <th>Date Opened</th>
+                <th>Date Closed</th>
+                <th>Department</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={positionService.data} for:item="pos">   
+                <tr key={pos.Id}>
+                    <td>{pos.Name}</td>
+                    <td>{pos.Date_Opened__c}</td>
+                    <td>{pos.Date_Closed__c}</td>
+                    <td>{pos.Department__c}</td>
+                    <td>{pos.Location__c}</td>
+                </tr>
+            </template>
+        </tbody>
+    </table>
+</template>
